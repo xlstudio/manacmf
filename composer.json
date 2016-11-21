@@ -1,0 +1,43 @@
+{
+    "name": "xlstudio/manacmf",
+    "description": "This is a content management framework(ManaCMF) based on ManaPHP Framework.",
+    "type": "project",
+    "keywords": [
+        "manaphp",
+        "framework",
+        "manacmf",
+        "cmf",
+        "cms"
+    ],
+    "homepage": "https://github.com/xlstudio/manacmf",
+     "support": {
+        "issues": "https://github.com/xlstudio/manacmf/issues",
+        "source": "https://github.com/xlstudio/manacmf"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Xiphin",
+            "email": "Xiphin@qq.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.4.0",
+	    "manaphp/framework": "dev-master"
+    },
+    "autoload": {
+        "files": [
+            "vendor/manaphp/framework/helpers.php",
+            "Application/helpers.php"
+        ]
+    },
+    "scripts": {
+        "post-package-install": [
+            "php -r \"file_exists('helpers.php') && copy('helpers.php', 'vendor/manaphp/framework/helpers.php') && unlink('helpers.php');\""
+        ],
+        "post-package-update": [
+            "php -r \"file_exists('helpers.php') && copy('helpers.php', 'vendor/manaphp/framework/helpers.php') && unlink('helpers.php');\""
+        ]
+    },
+    "minimum-stability": "dev"
+}

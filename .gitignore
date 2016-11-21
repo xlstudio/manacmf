@@ -1,0 +1,14 @@
+#ide
+.idea
+.vscode
+
+#data
+/data/
+
+#log
+*.log
+
+#composer
+composer.lock
+composer.phar
+/vendor/
